@@ -3,3 +3,6 @@ build/*
 
 #node_modules
 node_modules/*
+
+#IDE dir
+.idea/*
