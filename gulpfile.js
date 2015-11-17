@@ -6,7 +6,7 @@ var source = require("vinyl-source-stream");
 
 var pathReference = {
     appEntryPoints: ["src/app.js"],
-    buildJSFile: "app.js",
+    buildJSFile: "app-build.js",
     buildJSDir: "build"
 };
 
@@ -27,7 +27,7 @@ gulp.task("watch", function() {
             .pipe(gulp.dest(pathReference.buildJSDir));
         console.log("updated");
     })
-    .bundle()
-    .pipe(source(pathReference.buildJSFile))
-    .pipe(gulp.dest(pathReference.buildJSDir));
+        .bundle()
+        .pipe(source(pathReference.buildJSFile))
+        .pipe(gulp.dest(pathReference.buildJSDir));
 });

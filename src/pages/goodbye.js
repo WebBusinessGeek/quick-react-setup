@@ -1,14 +1,13 @@
 var React = require("react");
 
-var Child = React.createClass({
+GoodByePage = React.createClass({
     render: function() {
         return(
             <div>
-                <h5>This is from the child component.</h5>
+                <h2>Goodbye</h2>
             </div>
         )
     }
 });
 
-
-module.exports = Child;
+module.exports = GoodByePage;
