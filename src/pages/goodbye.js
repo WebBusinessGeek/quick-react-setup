@@ -3,8 +3,8 @@ var React = require("react");
 GoodByePage = React.createClass({
     render: function() {
         return(
-            <div>
-                <h2>Goodbye</h2>
+            <div id="goodbyePageContainer">
+                <h2 id="goodbyePageHeader">Goodbye</h2>
             </div>
         )
     }
