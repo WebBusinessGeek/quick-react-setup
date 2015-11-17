@@ -19,6 +19,8 @@
     "history": "~1.13.1",
     "express": "~4.13.3",
     "react-router": "~1.0.0",
-    "nodemon": "~1.8.1"
+    "nodemon": "~1.8.1",
+    "bootstrap": "~3.3.5",
+    "gulp-shell": "~0.5.1"
   }
 }

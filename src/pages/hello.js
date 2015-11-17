@@ -7,7 +7,7 @@ var HelloPage = React.createClass({
         return (
             <div>
                 <Parent />
-                <a href="/#/goodbye">Goodbye</a>
+                <a className="btn btn-primary" href="/#/goodbye">Goodbye</a>
             </div>
         )
     }

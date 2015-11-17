@@ -4,3 +4,4 @@ var Router = require("react-router").Router;
 var routes = require("./routes");
 
 ReactDOM.render(<Router>{routes}</Router>, document.getElementById("app"));
+
