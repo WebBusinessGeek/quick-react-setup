@@ -5,9 +5,10 @@ var Parent = require("../components/parent");
 var HelloPage = React.createClass({
     render: function() {
         return (
-            <div>
+            <div id="helloPageContainer">
                 <Parent />
-                <a href="/#/goodbye">Goodbye</a>
+                <a className="btn btn-primary" href="/#/goodbye">Goodbye</a>
+                <p id="helloPageWelcome">Welcome to the party</p>
             </div>
         )
     }
