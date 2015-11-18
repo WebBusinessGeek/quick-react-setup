@@ -1,6 +1,7 @@
 var React = require("react");
 
 LoginPage = React.createClass({
+
     render: function() {
         return (
             <div id="loginPageContainer">
