@@ -10,8 +10,29 @@ var RegisterPage = React.createClass({
         });
     },
 
-    handleSuccessfulSubmit: function(responseMessage) {
-        console.log(responseMessage);
+    handleSuccessfulSubmit: function(responseMessage, credentials) {
+        this.setState({
+            shouldShowErrorMessage: false
+        });
+        $.ajax({
+            url: "http://localhost:8132/users/authenticate",
+            dataType: "json",
+            type: "POST",
+            data: credentials,
+            success: function(response) {
+                if(response.status == "fail") {
+                    console.log(response.data.message);
+                }
+                else {
+                    localStorage.setItem("token", response.data.token);
+                }
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.log(err);
+            }
+        });
+
+        window.location = "/#/dashboard";
     },
 
     handleSubmit: function(e) {
@@ -34,7 +55,7 @@ var RegisterPage = React.createClass({
                     this.handleFailedSubmit(response.data.message);
                 }
                 else {
-                    this.handleSuccessfulSubmit(response.data.message);
+                    this.handleSuccessfulSubmit(response.data.message, dataToSend);
                 }
             }.bind(this),
             error: function(xhr, status, err) {

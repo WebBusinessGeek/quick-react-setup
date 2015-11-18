@@ -9,6 +9,7 @@ var helloPage = require("./pages/hello");
 var notFoundPage = require("./pages/notFound");
 var loginPage = require("./pages/login");
 var registerPage = require("./pages/register");
+var dashboardPage = require("./pages/dashboard");
 
 /*Routes*/
 var routes = (
@@ -16,6 +17,7 @@ var routes = (
         <Route name="hello" path="/" component={helloPage} />
         <Route name="login" path="/login" component={loginPage} />
         <Route name="login" path="/register" component={registerPage} />
+        <Route name="dashboard" path"/dashboard" component={dashboardPage} />
         <Route name="notFound" path="/*" component={notFoundPage} />
     </Router>
 );
