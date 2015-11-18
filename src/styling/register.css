@@ -1,10 +1,10 @@
-#loginForm {
+#registerForm {
     position:relative;
     top: 100px;
     height: 400px;
     padding: 100px;
 }
 
-#loginForm {
-    background: #286090;
+#registerForm {
+    background: #449D44;
 }
