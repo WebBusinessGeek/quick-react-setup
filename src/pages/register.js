@@ -4,7 +4,10 @@ var $ = require("jquery");
 var RegisterPage = React.createClass({
 
     handleFailedSubmit: function(responseMessage) {
-        console.log(responseMessage);
+        this.setState({
+            shouldShowErrorMessage: true,
+            errorMessage: responseMessage
+        });
     },
 
     handleSuccessfulSubmit: function(responseMessage) {
@@ -40,11 +43,24 @@ var RegisterPage = React.createClass({
         });
     },
 
+    getInitialState: function() {
+        return {
+            shouldShowErrorMessage : false,
+            errorMessage: null
+        }
+    },
+
     render: function() {
+
         return(
             <div id="registerPageContainer">
 
                 <form id="registerForm" className="form-horizontal col-sm-6 col-sm-offset-3" onSubmit={this.handleSubmit}>
+
+                    { this.state.shouldShowErrorMessage ?
+                        <div id="errorMessageContainer" className="col-sm-12 text-center"> <p id="errorMessage"> {this.state.errorMessage} </p> </div>
+                        : null
+                    }
 
                     <div id="registerFormHeader" className="col-sm-12 text-center">
                         <h4 id="registerFormHeadline">Register</h4>
