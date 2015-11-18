@@ -1,14 +1,13 @@
 var React = require("react");
 
-var Parent = require("../components/parent");
-
 var HelloPage = React.createClass({
     render: function() {
         return (
-            <div id="helloPageContainer">
-                <Parent />
-                <a className="btn btn-primary" href="/#/goodbye">Goodbye</a>
-                <p id="helloPageWelcome">Welcome to the party</p>
+            <div id="helloPageContainer" className="text-center">
+                <h1 id="helloPageWelcome">Hello Earth!</h1>
+                <a className="btn btn-primary" href="/#/login">Log in</a>
+                <a className="btn btn-success" href="/#/register">Register</a>
+                <a className="btn btn-danger" href="/#/bad">404 page</a>
             </div>
         )
     }

@@ -6,14 +6,14 @@ var createBrowserHistory = require("history/lib/createBrowserHistory");
 
 /*Pages*/
 var helloPage = require("./pages/hello");
-var goodByePage = require("./pages/goodbye");
 var notFoundPage = require("./pages/notFound");
+var loginPage = require("./pages/login");
 
 /*Routes*/
 var routes = (
     <Router history={createBrowserHistory()}>
         <Route name="hello" path="/" component={helloPage} />
-        <Route name="goodBye" path="/goodbye" component={goodByePage} />
+        <Route name="login" path="/login" component={loginPage} />
         <Route name="notFound" path="/*" component={notFoundPage} />
     </Router>
 );
