@@ -25,14 +25,13 @@ var RegisterPage = React.createClass({
                 }
                 else {
                     localStorage.setItem("token", response.data.token);
+                    window.location = "/#/dashboard";
                 }
             }.bind(this),
             error: function(xhr, status, err) {
                 console.log(err);
             }
         });
-
-        window.location = "/#/dashboard";
     },
 
     handleSubmit: function(e) {
